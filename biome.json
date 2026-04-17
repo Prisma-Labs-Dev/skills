@@ -1,0 +1,29 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.4.12/schema.json",
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space"
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true
+    }
+  },
+  "files": {
+    "ignoreUnknown": true,
+    "includes": [
+      "package.json",
+      "catalog/**",
+      "docs/**",
+      "schemas/**",
+      "src/**",
+      "tests/**",
+      "README.md",
+      "AGENTS.md",
+      ".env.example",
+      "tsconfig.json",
+      "vitest.config.ts"
+    ]
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/vabole/skills-meta/schemas/catalog.schema.json",
+  "title": "Skills Meta Catalog",
+  "type": "object",
+  "required": ["sources", "skills", "collections"],
+  "properties": {
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "kind",
+          "repository",
+          "url",
+          "description",
+          "managedBy"
+        ],
+        "properties": {
+          "id": { "type": "string" },
+          "kind": { "enum": ["github-repo", "local-fork"] },
+          "repository": { "type": "string" },
+          "url": { "type": "string", "format": "uri" },
+          "description": { "type": "string" },
+          "managedBy": { "enum": ["external", "vendored"] }
+        },
+        "additionalProperties": false
+      }
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "sourceId", "install", "tags", "notes"],
+        "properties": {
+          "id": { "type": "string" },
+          "sourceId": { "type": "string" },
+          "install": {
+            "type": "object",
+            "required": ["kind", "skill"],
+            "properties": {
+              "kind": { "enum": ["skills-add"] },
+              "package": { "type": "string" },
+              "path": { "type": "string" },
+              "skill": { "type": "string" }
+            },
+            "oneOf": [{ "required": ["package"] }, { "required": ["path"] }],
+            "additionalProperties": false
+          },
+          "upstream": {
+            "type": "object",
+            "required": ["repository", "commit", "path"],
+            "properties": {
+              "repository": { "type": "string" },
+              "commit": { "type": "string" },
+              "path": { "type": "string" }
+            },
+            "additionalProperties": false
+          },
+          "tags": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "notes": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "collections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "description", "skills"],
+        "properties": {
+          "id": { "type": "string" },
+          "description": { "type": "string" },
+          "skills": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

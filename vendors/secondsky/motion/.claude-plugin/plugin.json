@@ -1,0 +1,17 @@
+{
+  "name": "motion",
+  "description": "Motion (Framer Motion) React animation library plus local polish and bar-raising guidance. Use for drag-and-drop, scroll animations, gestures, SVG morphing, motion audits, or refining interactive UI quality.",
+  "version": "3.2.2",
+  "author": {
+    "name": "Claude Skills Maintainers",
+    "email": "maintainers@example.com"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/secondsky/claude-skills",
+  "keywords": [
+    "motion",
+    "frontend",
+    "components",
+    "svg"
+  ]
+}

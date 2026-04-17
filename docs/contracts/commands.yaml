@@ -1,0 +1,52 @@
+commands:
+  bootstrap:
+    run: pnpm install
+    purpose: Install repo dependencies and generate the lockfile.
+    outputs:
+      - /Users/vabole/repos/skills/pnpm-lock.yaml
+  dev:
+    run: pnpm dev
+    purpose: Run the CLI in watch mode during local iteration.
+    outputs:
+      - terminal output
+  list:
+    run: pnpm skills-meta list
+    purpose: Show sources, skills, and collections.
+    outputs:
+      - terminal output
+      - JSON with --json
+  test:
+    run: pnpm test
+    purpose: Run offline unit tests for catalog planning and repo validation.
+    outputs:
+      - terminal output
+  lint:
+    run: pnpm lint
+    purpose: Run formatting, linting, and TypeScript checks.
+    outputs:
+      - terminal output
+  format:
+    run: pnpm format
+    purpose: Apply Biome formatting.
+    outputs:
+      - formatted files
+  build:
+    run: pnpm build
+    purpose: Compile the TypeScript CLI to dist/.
+    outputs:
+      - /Users/vabole/repos/skills/dist
+  check:
+    run: pnpm check
+    purpose: Fast local verification before committing.
+    outputs:
+      - terminal output
+  smoke:
+    run: pnpm smoke
+    purpose: User-visible smoke path for list/install-plan/validation flows.
+    outputs:
+      - terminal output
+  ci:
+    run: pnpm run ci
+    purpose: Full local validation story mirrored by CI.
+    outputs:
+      - terminal output

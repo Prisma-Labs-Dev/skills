@@ -1,0 +1,95 @@
+{
+  "$schema": "../schemas/catalog.schema.json",
+  "sources": [
+    {
+      "id": "apple-skills",
+      "kind": "github-repo",
+      "repository": "vabole/apple-skills",
+      "url": "https://github.com/vabole/apple-skills",
+      "description": "Canonical Apple development skills maintained in a separate dedicated repository.",
+      "managedBy": "external"
+    },
+    {
+      "id": "secondsky-motion-fork",
+      "kind": "local-fork",
+      "repository": "secondsky/claude-skills",
+      "url": "https://github.com/secondsky/claude-skills",
+      "description": "Locally vendored fork of the upstream motion skill with added polish and bar-raising guidance.",
+      "managedBy": "vendored"
+    }
+  ],
+  "skills": [
+    {
+      "id": "ios-dev",
+      "sourceId": "apple-skills",
+      "install": {
+        "kind": "skills-add",
+        "package": "vabole/apple-skills",
+        "skill": "ios-dev"
+      },
+      "tags": ["apple", "ios", "coordinator"],
+      "notes": "Use as the Apple-side entrypoint skill for general iOS and Swift work."
+    },
+    {
+      "id": "hig",
+      "sourceId": "apple-skills",
+      "install": {
+        "kind": "skills-add",
+        "package": "vabole/apple-skills",
+        "skill": "hig"
+      },
+      "tags": ["apple", "design", "guidelines"],
+      "notes": "Apple Human Interface Guidelines reference."
+    },
+    {
+      "id": "ios-design-consultant",
+      "sourceId": "apple-skills",
+      "install": {
+        "kind": "skills-add",
+        "package": "vabole/apple-skills",
+        "skill": "ios-design-consultant"
+      },
+      "tags": ["apple", "design", "ux"],
+      "notes": "Product and UX guidance for Apple-style interfaces."
+    },
+    {
+      "id": "ios-ui-craft",
+      "sourceId": "apple-skills",
+      "install": {
+        "kind": "skills-add",
+        "package": "vabole/apple-skills",
+        "skill": "ios-ui-craft"
+      },
+      "tags": ["apple", "design", "polish"],
+      "notes": "Production-grade SwiftUI craftsmanship and visual quality guidance."
+    },
+    {
+      "id": "motion",
+      "sourceId": "secondsky-motion-fork",
+      "install": {
+        "kind": "skills-add",
+        "path": "vendors/secondsky/motion",
+        "skill": "motion"
+      },
+      "upstream": {
+        "repository": "secondsky/claude-skills",
+        "commit": "88da5ffe9767d2b75bd5a5545165ca4bcd868168",
+        "path": "plugins/motion"
+      },
+      "tags": ["frontend", "animation", "polish", "bar-raising"],
+      "notes": "Local fork of the Motion skill. The fork preserves the upstream guidance and adds a dedicated polish and bar-raising review layer."
+    }
+  ],
+  "collections": [
+    {
+      "id": "apple-design",
+      "description": "Core Apple-focused design guidance drawn from the apple-skills repository.",
+      "skills": ["ios-dev", "hig", "ios-design-consultant", "ios-ui-craft"]
+    },
+    {
+      "id": "motion-polish",
+      "description": "Motion plus the local polish/bar-raising heuristics from the vendored fork.",
+      "skills": ["motion"]
+    }
+  ]
+}

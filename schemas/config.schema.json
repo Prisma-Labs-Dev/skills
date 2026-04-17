@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/vabole/skills-meta/schemas/config.schema.json",
+  "title": "Skills Meta Environment",
+  "type": "object",
+  "properties": {
+    "SKILLS_META_DEFAULT_AGENT": {
+      "description": "Default agent name used by the install wrapper when --agent is omitted.",
+      "type": "string"
+    },
+    "SKILLS_META_DEFAULT_SCOPE": {
+      "description": "Default installation scope for the install wrapper.",
+      "enum": ["project", "global"]
+    }
+  },
+  "additionalProperties": true
+}

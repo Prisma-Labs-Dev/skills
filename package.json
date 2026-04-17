@@ -1,0 +1,30 @@
+{
+  "name": "@vabole/skills-meta",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.33.0",
+  "description": "Control plane for external skill sources, local forks, and curated install collections.",
+  "scripts": {
+    "bootstrap": "pnpm install",
+    "dev": "tsx watch src/cli.ts list --json",
+    "skills-meta": "tsx src/cli.ts",
+    "test": "vitest run",
+    "lint": "biome check . && tsc --noEmit",
+    "format": "biome format --write .",
+    "build": "rm -rf dist && tsc -p tsconfig.json --outDir dist",
+    "check": "pnpm lint && pnpm test",
+    "smoke": "tsx src/cli.ts list --json > /dev/null && tsx src/cli.ts install motion --dry-run --json > /dev/null && tsx src/cli.ts validate --json > /dev/null",
+    "ci": "pnpm lint && pnpm test && pnpm smoke"
+  },
+  "engines": {
+    "node": ">=25.0.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.2.4",
+    "@types/node": "^24.9.1",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
+  }
+}
