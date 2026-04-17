@@ -19,11 +19,13 @@
         ],
         "properties": {
           "id": { "type": "string" },
-          "kind": { "enum": ["github-repo", "local-fork"] },
+          "kind": {
+            "enum": ["github-repo", "local-fork", "repo-owned-package"]
+          },
           "repository": { "type": "string" },
           "url": { "type": "string", "format": "uri" },
           "description": { "type": "string" },
-          "managedBy": { "enum": ["external", "vendored"] }
+          "managedBy": { "enum": ["external", "vendored", "repo-owned"] }
         },
         "additionalProperties": false
       }

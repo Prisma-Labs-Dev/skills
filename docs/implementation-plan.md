@@ -20,10 +20,10 @@ Completed in this slice:
 - bootstrap docs and contracts,
 - local catalog and validation CLI,
 - initial external source entries for `apple-skills`,
-- vendored `motion` fork with local polish guidance.
+- vendored `motion` fork with local polish guidance,
+- first repo-owned package for generic high-bar animation direction.
 
 Next slice:
 
 - add a repeatable import/update command for vendored forks,
 - grow collections based on real project setups instead of speculative bundles.
-

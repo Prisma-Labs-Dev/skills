@@ -6,6 +6,7 @@
 - catalog schema and registry,
 - minimal CLI for list/show/install planning/validation,
 - first vendored fork for `motion`,
+- first repo-owned package for `ui-animation-direction`,
 - initial Apple design collection backed by `apple-skills`.
 
 ## Remaining
@@ -18,4 +19,3 @@
 
 Do the import/update automation first. Everything else depends on keeping
 vendored forks maintainable.
-

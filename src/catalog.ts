@@ -1,7 +1,7 @@
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import path from "node:path";
 
-export type SourceKind = "github-repo" | "local-fork";
+export type SourceKind = "github-repo" | "local-fork" | "repo-owned-package";
 
 export interface SourceEntry {
   id: string;
@@ -9,7 +9,7 @@ export interface SourceEntry {
   repository: string;
   url: string;
   description: string;
-  managedBy: "external" | "vendored";
+  managedBy: "external" | "vendored" | "repo-owned";
 }
 
 export interface SkillInstall {

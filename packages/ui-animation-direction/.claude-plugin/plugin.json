@@ -1,0 +1,12 @@
+{
+  "name": "ui-animation-direction",
+  "description": "High-bar guidance for creating UI animation across CSS, native platform primitives, and animation libraries. Use for transitions, micro-interactions, motion polish, and raising the animation quality bar.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Vabole",
+    "email": "maintainers@example.com"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/vabole/skills",
+  "keywords": ["animation", "motion", "css", "frontend", "design"]
+}

@@ -15,6 +15,8 @@ tracks three things in one place:
   Machine-readable registry of sources, skills, and installable collections.
 - `vendors/`
   Locally forked skills that you want to own and extend inside this repo.
+- `packages/`
+  Repo-owned skill packages that are authored here rather than forked.
 - `src/cli.ts`
   Small wrapper for listing catalog entries, inspecting one entry, planning
   installs, and validating repo invariants.
@@ -104,8 +106,10 @@ That is the right model for the `motion` skill.
   Collection for Apple design work, backed by `vabole/apple-skills`.
 - `motion`
   Vendored fork of `secondsky/claude-skills/plugins/motion`.
+- `ui-animation-direction`
+  Repo-owned high-bar guidance for UI animation across CSS and libraries.
 - `motion-polish`
-  Collection wrapper around the local `motion` fork.
+  Collection that pairs the local `motion` fork with the repo-owned animation guidance skill.
 
 ## Next Direction
 

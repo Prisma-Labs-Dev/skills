@@ -16,6 +16,14 @@
       "url": "https://github.com/secondsky/claude-skills",
       "description": "Locally vendored fork of the upstream motion skill with added polish and bar-raising guidance.",
       "managedBy": "vendored"
+    },
+    {
+      "id": "ui-animation-direction",
+      "kind": "repo-owned-package",
+      "repository": "vabole/skills",
+      "url": "file:///Users/vabole/repos/skills/packages/ui-animation-direction",
+      "description": "Repo-owned high-bar animation guidance skill for UI motion across CSS, native platform primitives, and animation libraries.",
+      "managedBy": "repo-owned"
     }
   ],
   "skills": [
@@ -78,6 +86,17 @@
       },
       "tags": ["frontend", "animation", "polish", "bar-raising"],
       "notes": "Local fork of the Motion skill. The fork preserves the upstream guidance and adds a dedicated polish and bar-raising review layer."
+    },
+    {
+      "id": "ui-animation-direction",
+      "sourceId": "ui-animation-direction",
+      "install": {
+        "kind": "skills-add",
+        "path": "packages/ui-animation-direction",
+        "skill": "ui-animation-direction"
+      },
+      "tags": ["frontend", "animation", "quality", "guidance"],
+      "notes": "Repo-owned guidance skill for creating high-bar UI animation with clear intent, restraint, accessibility, and implementation discipline across CSS and libraries."
     }
   ],
   "collections": [
@@ -88,8 +107,8 @@
     },
     {
       "id": "motion-polish",
-      "description": "Motion plus the local polish/bar-raising heuristics from the vendored fork.",
-      "skills": ["motion"]
+      "description": "Motion plus repo-owned direction about implementing high-bar UI animation instead of shipping generic effects.",
+      "skills": ["motion", "ui-animation-direction"]
     }
   ]
 }

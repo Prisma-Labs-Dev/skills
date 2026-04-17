@@ -52,6 +52,13 @@ skill's official references.
 3. Add your local references, templates, or scripts.
 4. Validate with `pnpm run ci`.
 
+## Add a new repo-owned skill
+
+1. Create an installable package under `packages/<skill-name>`.
+2. Add the catalog source and skill entries.
+3. Add references only when they materially improve the skill.
+4. Validate with `pnpm run ci`.
+
 ## Update a vendored fork
 
 Current state:

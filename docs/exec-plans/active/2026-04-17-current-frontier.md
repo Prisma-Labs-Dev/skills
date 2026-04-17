@@ -40,13 +40,15 @@ repo needs structure before more skills are added ad hoc.
 
 Bootstrap slice is complete. The repo now has a working catalog, minimal CLI,
 initial external source entries, and a vendored `motion` fork with local polish
-guidance. The next active slice should focus on import/update automation for
-vendored forks.
+guidance. It also now has a first repo-owned guidance package for
+`ui-animation-direction`. The next active slice should focus on import/update
+automation for vendored forks.
 
 ## Last Completed Slice
 
 Created the repo scaffold, command surface, machine-readable catalog, initial
-docs, vendored `motion` fork, and local polish/bar-raising extension.
+docs, vendored `motion` fork, local polish/bar-raising extension, and a
+repo-owned high-bar UI animation guidance package.
 
 ## Key Context Paths
 
@@ -61,6 +63,7 @@ docs, vendored `motion` fork, and local polish/bar-raising extension.
 - 2026-04-17: Confirmed that `skills add` accepts local paths, which makes vendored fork installs viable.
 - 2026-04-17: Confirmed the upstream `motion` skill is a self-contained package under `plugins/motion`.
 - 2026-04-17: Bootstrapped the catalog and CLI before importing the first vendored fork.
+- 2026-04-17: Added a repo-owned `ui-animation-direction` package so animation quality guidance is not tied to the Motion library.
 
 ## Validation Log
 
@@ -69,6 +72,8 @@ docs, vendored `motion` fork, and local polish/bar-raising extension.
 - 2026-04-17: `pnpm smoke`
 - 2026-04-17: `pnpm run ci`
 - 2026-04-17: `pnpm skills-meta show motion --json`
+- 2026-04-17: `npx -y skills add /Users/vabole/repos/skills/packages/ui-animation-direction -l`
+- 2026-04-17: `pnpm skills-meta show ui-animation-direction --json`
 
 ## Artifacts
 
@@ -76,6 +81,7 @@ docs, vendored `motion` fork, and local polish/bar-raising extension.
 - `schemas/catalog.schema.json`
 - `src/cli.ts`
 - `docs/contracts/commands.yaml`
+- `packages/ui-animation-direction`
 
 ## Blockers
 
@@ -84,4 +90,5 @@ None currently recorded.
 ## Next Step
 
 Add a dedicated import/update command that can refresh a vendored fork from a
-pinned upstream repo/path while preserving local provenance and local additions.
+pinned upstream repo/path while preserving local provenance and local additions,
+while leaving repo-owned packages authored locally.

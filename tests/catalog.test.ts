@@ -11,6 +11,9 @@ describe("catalog", () => {
 
     expect(catalog.sources.length).toBeGreaterThan(0);
     expect(catalog.skills.find((entry) => entry.id === "motion")).toBeDefined();
+    expect(
+      catalog.skills.find((entry) => entry.id === "ui-animation-direction"),
+    ).toBeDefined();
   });
 
   test("plans local install commands for the motion fork", () => {
@@ -41,6 +44,20 @@ describe("catalog", () => {
       "hig",
       "ios-design-consultant",
       "ios-ui-craft",
+    ]);
+  });
+
+  test("motion-polish includes library docs and direction guidance", () => {
+    const catalog = loadCatalog(root);
+    const plan = planInstall(catalog, root, "motion-polish", {
+      agents: [],
+      global: false,
+      copy: false,
+    });
+
+    expect(plan.expandedSkills.map((skill) => skill.id)).toEqual([
+      "motion",
+      "ui-animation-direction",
     ]);
   });
 

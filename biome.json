@@ -16,6 +16,7 @@
       "package.json",
       "catalog/**",
       "docs/**",
+      "packages/**",
       "schemas/**",
       "scripts/**",
       "sources/**",

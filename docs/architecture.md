@@ -16,6 +16,8 @@
   Machine-readable contracts for the catalog and environment config.
 - `vendors/`
   Vendored skill forks that remain installable through local paths.
+- `packages/`
+  Repo-owned skill packages authored directly in this repository.
 - `src/`
   Minimal CLI to list, inspect, plan, and validate.
 - `docs/`
@@ -46,8 +48,14 @@ Every vendored skill must record:
 - upstream source path,
 - local additions or divergence.
 
+### Author owned guidance locally
+
+When the skill is your own point of view rather than an upstream fork, author it
+as a repo-owned package under `packages/`.
+
+Example: `packages/ui-animation-direction`.
+
 ### Keep installs uniform
 
 Project setup should not need to care whether a skill is external or vendored.
 The catalog resolves both to a concrete `skills add ... --skill ...` command.
-
