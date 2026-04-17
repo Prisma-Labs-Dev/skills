@@ -1,9 +1,9 @@
 {
-  "name": "vabole-skills",
+  "name": "prisma-labs-agent-skills",
   "description": "Curated UI animation and motion skills for Claude Code, Codex, and other agents.",
   "author": {
-    "name": "vabole"
+    "name": "Prisma Labs"
   },
-  "repository": "https://github.com/vabole/skills",
+  "repository": "https://github.com/Prisma-Labs/agent-skills",
   "keywords": ["skills", "animation", "motion", "frontend", "design"]
 }

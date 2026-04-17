@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/vabole/skills-meta/schemas/config.schema.json",
+  "$id": "https://github.com/Prisma-Labs/agent-skills/schemas/config.schema.json",
   "title": "Skills Meta Environment",
   "type": "object",
   "properties": {

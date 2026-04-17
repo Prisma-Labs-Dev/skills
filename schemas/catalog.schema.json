@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/vabole/skills-meta/schemas/catalog.schema.json",
+  "$id": "https://github.com/Prisma-Labs/agent-skills/schemas/catalog.schema.json",
   "title": "Skills Meta Catalog",
   "type": "object",
   "required": ["sources", "skills", "collections"],

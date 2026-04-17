@@ -1,4 +1,4 @@
-# Vabole Skills
+# Prisma Labs Agent Skills
 
 Curated installable skills for UI animation, motion libraries, and high-bar
 interaction quality.
@@ -12,7 +12,7 @@ The repository root is an install source.
 
 For local use on this machine, the source path is
 `/Users/vabole/repos/skills`. Once this repository has a published remote,
-replace that local path with the repository source.
+replace that local path with `github:Prisma-Labs/agent-skills`.
 
 ### Claude Code
 
@@ -20,6 +20,12 @@ Install all skills from this local checkout:
 
 ```bash
 npx skills add /Users/vabole/repos/skills --agent claude-code --skill '*' -y
+```
+
+Install all skills from GitHub:
+
+```bash
+npx skills add github:Prisma-Labs/agent-skills --agent claude-code --skill '*' -y
 ```
 
 Install only Motion:
@@ -42,6 +48,12 @@ Install all skills globally:
 npx skills add /Users/vabole/repos/skills --agent codex --skill '*' -g -y
 ```
 
+Install all skills globally from GitHub:
+
+```bash
+npx skills add github:Prisma-Labs/agent-skills --agent codex --skill '*' -g -y
+```
+
 Install only Motion:
 
 ```bash
@@ -60,6 +72,12 @@ Install all skills globally:
 
 ```bash
 npx skills add /Users/vabole/repos/skills --agent cursor --skill '*' -g -y
+```
+
+Install all skills globally from GitHub:
+
+```bash
+npx skills add github:Prisma-Labs/agent-skills --agent cursor --skill '*' -g -y
 ```
 
 ## What's Included
