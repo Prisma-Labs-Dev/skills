@@ -24,15 +24,8 @@ animations, gestures, scroll effects, layout transitions, and spring physics.
 
 **Production Tested**: React 19, Next.js 15, Vite 6, Tailwind v4
 
-**Local Fork Note**: This copy is maintained inside
-`/Users/vabole/repos/skills` as a vendored fork. It preserves the upstream
-Motion guidance and adds a dedicated polish/bar-raising review layer in
-`references/polish-and-bar-raising.md`.
-
-**Official Source Note**: For current package versions, API details, examples,
-and tutorials, use the official Motion docs and tutorials listed in
-`references/official-learning-path.md`. This fork should complement the
-official material, not replace it.
+For current package versions, API details, examples, and tutorials, use the
+official Motion pages listed in `references/official-learning-path.md`.
 
 **Two-Lane Usage Model**:
 - Use `references/official-learning-path.md` and
@@ -465,7 +458,7 @@ Claude should load these references based on user needs:
 - User needs feature comparison or decision matrix
 
 ### Load `references/official-learning-path.md` when:
-- User wants canonical Motion documentation rather than fork-local summaries
+- User wants canonical Motion documentation rather than local summaries
 - User asks for tutorials, official examples, or recommended learning order
 - User asks for the latest version, latest API guidance, or installation details
 - User wants the optional Motion MCP or AI kit workflow

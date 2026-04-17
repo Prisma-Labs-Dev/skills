@@ -1,6 +1,6 @@
 # Polish And Bar Raising
 
-This fork adds a second pass on top of the upstream Motion guidance.
+Use this as the second pass after the implementation is functionally correct.
 
 The first pass answers:
 
@@ -99,4 +99,3 @@ These are common signs that the work needs another pass:
 3. Remove one effect before adding another.
 4. Check reduced-motion behavior.
 5. Compare the result against the surrounding UI and normalize the motion family.
-

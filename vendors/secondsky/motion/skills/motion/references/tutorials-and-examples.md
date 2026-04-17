@@ -1,7 +1,5 @@
 # Tutorials And Examples
 
-> Generated from official Motion URLs by `pnpm motion-docs:refresh`.
-
 Use this reference when the user specifically wants learning material, worked examples, or inspiration rather than only API pages.
 
 ## Best Sources
@@ -25,5 +23,5 @@ Use this reference when the user specifically wants learning material, worked ex
 ## Good Matching Heuristic
 
 - Need freshness or canon: official docs/tutorials/examples.
-- Need a local starter or pre-filtered subset: this fork's opinionated guide and templates.
+- Need a local starter or pre-filtered subset: the local opinionated guide and templates.
 - Need refinement and taste: the local polish layer.

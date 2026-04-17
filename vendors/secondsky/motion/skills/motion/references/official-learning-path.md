@@ -1,7 +1,5 @@
 # Official Learning Path
 
-> Generated from official Motion URLs by `pnpm motion-docs:refresh`.
-
 Use this reference when the agent needs direct access to the official Motion docs, current API pages, tutorials, examples, or the optional AI kit/MCP workflow.
 
 ## Core Rule
@@ -31,7 +29,7 @@ Use these first when the agent needs the canonical docs, latest install guidance
 
 ## Core API Pages
 
-Use these when implementation questions need the official API surface rather than a fork-local summary.
+Use these when implementation questions need the official API surface rather than a local summary.
 
 ### [React motion component | Motion](https://motion.dev/docs/react-motion-component)
 
