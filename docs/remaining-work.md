@@ -7,6 +7,7 @@
 - minimal CLI for list/show/install planning/validation,
 - first vendored fork for `motion`,
 - first repo-owned package for `ui-animation-direction`,
+- direct root `skills/` layout for installable packages,
 - initial Apple design collection backed by `apple-skills`.
 
 ## Remaining

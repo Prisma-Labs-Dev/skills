@@ -47,14 +47,15 @@ skill's official references.
 
 ## Add a new locally forked skill
 
-1. Vendor the upstream skill package under `vendors/<owner>/<skill>`.
-2. Add provenance in the vendored directory and the catalog entry.
-3. Add your local references, templates, or scripts.
-4. Validate with `pnpm run ci`.
+1. Import the upstream skill package into a work area.
+2. Reshape the installable result into `skills/<skill-name>`.
+3. Record provenance in `docs/maintainers/`.
+4. Add your local references, templates, or scripts.
+5. Validate with `pnpm run ci`.
 
 ## Add a new repo-owned skill
 
-1. Create an installable package under `packages/<skill-name>`.
+1. Create an installable skill under `skills/<skill-name>`.
 2. Add the catalog source and skill entries.
 3. Add references only when they materially improve the skill.
 4. Validate with `pnpm run ci`.

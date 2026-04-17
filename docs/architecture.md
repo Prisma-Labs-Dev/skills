@@ -12,12 +12,10 @@
 
 - `catalog/registry.json`
   Source of truth for all catalog entries.
+- `skills/`
+  Direct install surface for every skill in this repository.
 - `schemas/`
   Machine-readable contracts for the catalog and environment config.
-- `vendors/`
-  Vendored skill forks that remain installable through local paths.
-- `packages/`
-  Repo-owned skill packages authored directly in this repository.
 - `src/`
   Minimal CLI to list, inspect, plan, and validate.
 - `docs/`
@@ -35,9 +33,10 @@ Example: `vabole/apple-skills`.
 ### Vendor selectively
 
 If you only want one skill from an upstream repo, vendor just that skill package
-here instead of forking the whole upstream repository.
+here instead of forking the whole upstream repository, but reshape the
+installable result into `skills/<name>`.
 
-Example: `vendors/secondsky/motion`.
+Example: `skills/motion`.
 
 ### Preserve provenance
 
@@ -51,9 +50,9 @@ Every vendored skill must record:
 ### Author owned guidance locally
 
 When the skill is your own point of view rather than an upstream fork, author it
-as a repo-owned package under `packages/`.
+as a direct skill under `skills/`.
 
-Example: `packages/ui-animation-direction`.
+Example: `skills/ui-animation-direction`.
 
 ### Keep installs uniform
 

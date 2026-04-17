@@ -13,7 +13,7 @@ Do not make agents read lines about:
 - how generation scripts work,
 - why the package was structured this way.
 
-Put that material here, in `PROVENANCE.md`, or in other repo docs instead.
+Put that material here or in other maintainer docs instead.
 
 ## Current Split
 
@@ -35,7 +35,7 @@ except where the skill directly routes the agent to the generated references.
 
 ### Generic animation guidance
 
-`packages/ui-animation-direction` is repo-owned guidance for animation quality
+`skills/ui-animation-direction` is repo-owned guidance for animation quality
 across CSS, WAAPI, platform primitives, and libraries. It is intentionally not
 library-specific.
 
@@ -51,3 +51,14 @@ library-specific.
 This repo does not need to copy that project exactly, but it is a strong
 reference for the general shape.
 
+## Current Shape
+
+The installable surface should stay obvious:
+
+- `skills/` contains every installable skill directly
+- `scripts/` contains maintainer tooling
+- `sources/` contains generation inputs and caches
+- `docs/maintainers/` contains repo mechanics and provenance
+
+That is closer to the `apple-skills` shape and easier for both humans and
+agents to navigate.

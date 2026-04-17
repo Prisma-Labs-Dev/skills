@@ -6,6 +6,8 @@
   Common workflows for adding, forking, and installing skills.
 - [maintainers/animation-skills.md](/Users/vabole/repos/skills/docs/maintainers/animation-skills.md)
   Maintainer note for keeping animation skill mechanics out of agent-facing files.
+- [maintainers/motion-skill.md](/Users/vabole/repos/skills/docs/maintainers/motion-skill.md)
+  Maintainer note for the Motion skill's upstream origin and local reshaping.
 - [implementation-plan.md](/Users/vabole/repos/skills/docs/implementation-plan.md)
   Current repo plan and planned slices.
 - [remaining-work.md](/Users/vabole/repos/skills/docs/remaining-work.md)

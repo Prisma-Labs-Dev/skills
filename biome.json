@@ -16,15 +16,16 @@
       "package.json",
       "catalog/**",
       "docs/**",
-      "packages/**",
       "schemas/**",
       "scripts/**",
+      "skills/**/*.md",
       "sources/**",
       "src/**",
       "tests/**",
       "README.md",
       "AGENTS.md",
       ".env.example",
+      ".claude-plugin/**",
       "tsconfig.json",
       "vitest.config.ts"
     ]

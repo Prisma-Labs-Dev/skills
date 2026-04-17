@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "packageManager": "pnpm@10.33.0",
-  "description": "Control plane for external skill sources, local forks, and curated install collections.",
+  "description": "Curated installable skills plus maintainer tooling for generated references and local guidance.",
   "scripts": {
     "bootstrap": "pnpm install",
     "dev": "tsx watch src/cli.ts list --json",
@@ -16,7 +16,7 @@
     "format": "biome format --write .",
     "build": "rm -rf dist && tsc -p tsconfig.json --outDir dist",
     "check": "pnpm lint && pnpm test",
-    "smoke": "tsx src/cli.ts list --json > /dev/null && tsx src/cli.ts install motion --dry-run --json > /dev/null && tsx src/cli.ts install ui-animation-direction --dry-run --json > /dev/null && tsx src/cli.ts validate --json > /dev/null",
+    "smoke": "npx -y skills add . -l > /dev/null && tsx src/cli.ts install motion --dry-run --json > /dev/null && tsx src/cli.ts install ui-animation-direction --dry-run --json > /dev/null && tsx src/cli.ts validate --json > /dev/null",
     "ci": "pnpm lint && pnpm test && pnpm smoke"
   },
   "engines": {

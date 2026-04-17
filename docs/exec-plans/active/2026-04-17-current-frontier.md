@@ -42,7 +42,7 @@ Bootstrap slice is complete. The repo now has a working catalog, minimal CLI,
 initial external source entries, and a vendored `motion` fork with local polish
 guidance. It also now has a first repo-owned guidance package for
 `ui-animation-direction`. The next active slice should focus on import/update
-automation for vendored forks.
+automation for vendored forks while keeping the direct `skills/` layout obvious.
 
 ## Last Completed Slice
 
@@ -64,6 +64,7 @@ repo-owned high-bar UI animation guidance package.
 - 2026-04-17: Confirmed the upstream `motion` skill is a self-contained package under `plugins/motion`.
 - 2026-04-17: Bootstrapped the catalog and CLI before importing the first vendored fork.
 - 2026-04-17: Added a repo-owned `ui-animation-direction` package so animation quality guidance is not tied to the Motion library.
+- 2026-04-17: Reshaped installable skills into a direct `skills/` layout to make root installs and repo navigation more obvious.
 
 ## Validation Log
 
@@ -72,8 +73,9 @@ repo-owned high-bar UI animation guidance package.
 - 2026-04-17: `pnpm smoke`
 - 2026-04-17: `pnpm run ci`
 - 2026-04-17: `pnpm skills-meta show motion --json`
-- 2026-04-17: `npx -y skills add /Users/vabole/repos/skills/packages/ui-animation-direction -l`
+- 2026-04-17: `npx -y skills add /Users/vabole/repos/skills/skills/ui-animation-direction -l`
 - 2026-04-17: `pnpm skills-meta show ui-animation-direction --json`
+- 2026-04-17: `npx -y skills add /Users/vabole/repos/skills --agent claude-code --skill '*' -y`
 
 ## Artifacts
 
@@ -81,7 +83,7 @@ repo-owned high-bar UI animation guidance package.
 - `schemas/catalog.schema.json`
 - `src/cli.ts`
 - `docs/contracts/commands.yaml`
-- `packages/ui-animation-direction`
+- `skills/`
 
 ## Blockers
 
@@ -91,4 +93,4 @@ None currently recorded.
 
 Add a dedicated import/update command that can refresh a vendored fork from a
 pinned upstream repo/path while preserving local provenance and local additions,
-while leaving repo-owned packages authored locally.
+while leaving repo-owned skills authored locally in the direct `skills/` layout.

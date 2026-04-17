@@ -1,119 +1,148 @@
-# Skills Meta Repository
+# Vabole Skills
 
-This directory is the control plane for your skills portfolio.
+Curated installable skills for UI animation, motion libraries, and high-bar
+interaction quality.
 
-It is intentionally not a clone of every skill repository you own. Instead it
-tracks three things in one place:
+This repository is structured so humans can understand it quickly and agents can
+maintain it without reconstructing hidden context.
 
-1. external skill repositories that remain canonical somewhere else,
-2. locally vendored forks for upstream skills you want to modify,
-3. curated collections that make project setup repeatable.
+## Install
 
-## Current Model
+The repository root is an install source.
 
-- `catalog/registry.json`
-  Machine-readable registry of sources, skills, and installable collections.
-- `vendors/`
-  Locally forked skills that you want to own and extend inside this repo.
-- `packages/`
-  Repo-owned skill packages that are authored here rather than forked.
-- `src/cli.ts`
-  Small wrapper for listing catalog entries, inspecting one entry, planning
-  installs, and validating repo invariants.
-- `docs/`
-  Durable operating model, decisions, and current frontier.
+For local use on this machine, the source path is
+`/Users/vabole/repos/skills`. Once this repository has a published remote,
+replace that local path with the repository source.
 
-The first concrete fork is `vendors/secondsky/motion`, imported from
-`secondsky/claude-skills` at commit `88da5ffe9767d2b75bd5a5545165ca4bcd868168`
-and extended locally with:
+### Claude Code
 
-- generated official-resource references sourced from `motion.dev`,
-- an opinionated local guide for the preferred subset,
-- a polish/bar-raising layer for refinement work.
+Install all skills from this local checkout:
 
-## Why This Shape
+```bash
+npx skills add /Users/vabole/repos/skills --agent claude-code --skill '*' -y
+```
 
-`apple-skills` is already its own canonical repository. Duplicating that content
-here would create two sources of truth. This repo should instead know how to
-point at `vabole/apple-skills` for shared skills and only vendor the individual
-upstream skills you actually want to fork.
+Install only Motion:
 
-That keeps the maintenance split clean:
+```bash
+npx skills add /Users/vabole/repos/skills --agent claude-code --skill motion -y
+```
 
-- whole-repo ownership stays in the dedicated repo,
-- selective customization lives here,
-- project install workflows can target either kind through one catalog.
+Install only the generic animation direction skill:
 
-## Commands
+```bash
+npx skills add /Users/vabole/repos/skills --agent claude-code --skill ui-animation-direction -y
+```
 
-Install dependencies:
+### Codex
+
+Install all skills globally:
+
+```bash
+npx skills add /Users/vabole/repos/skills --agent codex --skill '*' -g -y
+```
+
+Install only Motion:
+
+```bash
+npx skills add /Users/vabole/repos/skills --agent codex --skill motion -g -y
+```
+
+Install only the generic animation direction skill:
+
+```bash
+npx skills add /Users/vabole/repos/skills --agent codex --skill ui-animation-direction -g -y
+```
+
+### Cursor
+
+Install all skills globally:
+
+```bash
+npx skills add /Users/vabole/repos/skills --agent cursor --skill '*' -g -y
+```
+
+## What's Included
+
+| Skill | Type | Description |
+| --- | --- | --- |
+| `motion` | Library skill | Motion for React with official-doc routing, examples/tutorials links, an opinionated subset, and a polish/review layer |
+| `ui-animation-direction` | Guidance skill | Generic high-bar UI animation guidance across CSS, WAAPI, platform primitives, and libraries |
+
+## Recommended Install Sets
+
+### All skills
+
+Use `--skill '*'` when you want the full repo.
+
+### Motion stack
+
+Install both of these together when the project uses Motion and you also want
+the generic quality bar:
+
+- `motion`
+- `ui-animation-direction`
+
+Example for Claude Code:
+
+```bash
+npx skills add /Users/vabole/repos/skills --agent claude-code --skill motion --skill ui-animation-direction -y
+```
+
+Example for Codex:
+
+```bash
+npx skills add /Users/vabole/repos/skills --agent codex --skill motion --skill ui-animation-direction -g -y
+```
+
+## Repository Shape
+
+This repo is intentionally shaped to be obvious:
+
+- `skills/`
+  Every installable skill lives here directly.
+- `scripts/`
+  Maintainer tooling such as generated-doc refreshers.
+- `sources/`
+  Source manifests and generated caches for refreshable references.
+- `docs/maintainers/`
+  Provenance and repo-mechanics notes that should not leak into skill prose.
+- `catalog/`
+  Optional control-plane metadata for collections and install planning.
+
+The shape is influenced by [apple-skills](https://github.com/vabole/apple-skills/tree/main):
+
+- clear root install surface,
+- direct `skills/` directory,
+- generated reference docs driven by source inputs,
+- human-readable README with copy-paste commands.
+
+This repo does not need to copy that repository exactly, but it should keep the
+same level of clarity.
+
+## Maintainer Commands
+
+Install repo dependencies:
 
 ```bash
 pnpm bootstrap
 ```
 
-Inspect the catalog:
+List catalog entries:
 
 ```bash
 pnpm skills-meta list
-pnpm skills-meta show motion
 ```
 
-Plan or run an install:
-
-```bash
-pnpm skills-meta install motion --agent codex --dry-run
-pnpm skills-meta install apple-design --agent codex
-```
-
-Validate the repo:
-
-```bash
-pnpm check
-pnpm smoke
-pnpm run ci
-```
-
-Refresh the generated Motion resource references:
+Refresh generated Motion references:
 
 ```bash
 pnpm motion-docs:check
 pnpm motion-docs:refresh
 ```
 
-## Recommended Workflow
+Validate the repo:
 
-### For a repo you already own end-to-end
-
-Keep it external and add catalog entries that point at the GitHub repository.
-
-That is the right model for `vabole/apple-skills`.
-
-### For one upstream skill you want to fork
-
-1. Vendor only the relevant skill package into `vendors/<owner>/<skill>`.
-2. Record the upstream repo, commit, and source path in `catalog/registry.json`.
-3. Keep the plain official-docs layer generated from source inputs when possible.
-4. Keep opinionated guidance separate from the plain docs layer.
-5. Add any local references, templates, or scripts inside the vendored fork.
-6. Install it through the local path entry from this repo.
-
-That is the right model for the `motion` skill.
-
-## Current Catalog
-
-- `apple-design`
-  Collection for Apple design work, backed by `vabole/apple-skills`.
-- `motion`
-  Vendored fork of `secondsky/claude-skills/plugins/motion`.
-- `ui-animation-direction`
-  Repo-owned high-bar guidance for UI animation across CSS and libraries.
-- `motion-polish`
-  Collection that pairs the local `motion` fork with the repo-owned animation guidance skill.
-
-## Next Direction
-
-The next useful slice after this bootstrap is import/update automation for
-vendored forks so refreshing an upstream-pinned skill is one command instead of
-a manual copy step. Motion now has the first version of a generated
-official-resource pipeline; the same pattern can be extended to other forks.
+```bash
+pnpm run ci
+```

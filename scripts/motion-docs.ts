@@ -43,9 +43,6 @@ const cachePath = path.join(
 const outputPaths: Record<OutputName, string> = {
   "official-learning-path": path.join(
     root,
-    "vendors",
-    "secondsky",
-    "motion",
     "skills",
     "motion",
     "references",
@@ -53,9 +50,6 @@ const outputPaths: Record<OutputName, string> = {
   ),
   "tutorials-and-examples": path.join(
     root,
-    "vendors",
-    "secondsky",
-    "motion",
     "skills",
     "motion",
     "references",

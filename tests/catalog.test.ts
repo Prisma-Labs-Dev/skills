@@ -25,9 +25,7 @@ describe("catalog", () => {
     });
 
     expect(plan.commands).toHaveLength(1);
-    expect(plan.commands[0]?.source).toBe(
-      path.join(root, "vendors/secondsky/motion"),
-    );
+    expect(plan.commands[0]?.source).toBe(path.join(root, "skills/motion"));
     expect(plan.commands[0]?.args).toContain("codex");
   });
 

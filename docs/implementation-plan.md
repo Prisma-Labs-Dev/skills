@@ -21,7 +21,8 @@ Completed in this slice:
 - local catalog and validation CLI,
 - initial external source entries for `apple-skills`,
 - vendored `motion` fork with local polish guidance,
-- first repo-owned package for generic high-bar animation direction.
+- first repo-owned package for generic high-bar animation direction,
+- reshaped installable skills into a direct `skills/` layout.
 
 Next slice:
 
