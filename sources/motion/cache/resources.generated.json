@@ -1,0 +1,122 @@
+[
+  {
+    "id": "quick-start",
+    "group": "foundation",
+    "outputs": ["official-learning-path"],
+    "url": "https://motion.dev/docs/quick-start",
+    "localPurpose": "Start here for a broad official orientation before diving into React-specific pages.",
+    "resolvedUrl": "https://motion.dev/docs/quick-start",
+    "title": "Get started with Motion — install, first animation | Motion",
+    "description": "Learn Motion animation library: Install, animate HTML/SVG/WebGL elements with spring animations, staggering effects. Complete guide with examples."
+  },
+  {
+    "id": "react-docs",
+    "group": "foundation",
+    "outputs": ["official-learning-path"],
+    "url": "https://motion.dev/docs/react",
+    "localPurpose": "Canonical React entrypoint for Motion concepts, install flow, and feature overview.",
+    "resolvedUrl": "https://motion.dev/docs/react",
+    "title": "Motion for React: Get started - React Animation Library | Motion",
+    "description": "Build smooth 120fps React animations with Motion. Install in seconds, then master spring, gesture, scroll & layout animations. Start with our guide."
+  },
+  {
+    "id": "react-installation",
+    "group": "foundation",
+    "outputs": ["official-learning-path"],
+    "url": "https://motion.dev/docs/react-installation",
+    "localPurpose": "Use when package setup, framework integration, or latest install guidance matters.",
+    "resolvedUrl": "https://motion.dev/docs/react-installation",
+    "title": "How to install Motion for React | Motion",
+    "description": "Your complete guide to installing Motion for React. Learn how to set up the animation library in any project using npm, Yarn, or pnpm, with specific guides for Next.js and Vite."
+  },
+  {
+    "id": "motion-component",
+    "group": "core-api",
+    "outputs": ["official-learning-path"],
+    "url": "https://motion.dev/docs/react-motion-component",
+    "localPurpose": "Primary reference for the motion component and the props most teams use first.",
+    "resolvedUrl": "https://motion.dev/docs/react-motion-component",
+    "title": "React motion component | Motion",
+    "description": "The motion component supercharges every HTML and SVG element for 120fps React animations and gestures. Learn the API, props, and performance tips."
+  },
+  {
+    "id": "animate-presence",
+    "group": "core-api",
+    "outputs": ["official-learning-path"],
+    "url": "https://motion.dev/docs/react-animate-presence",
+    "localPurpose": "Canonical reference for exit animations and conditional rendering.",
+    "resolvedUrl": "https://motion.dev/docs/react-animate-presence",
+    "title": "AnimatePresence — React exit animations | Motion",
+    "description": "Enable effortless exit animations in React with AnimatePresence. It animates components on removal via the exit prop."
+  },
+  {
+    "id": "layout-animations",
+    "group": "core-api",
+    "outputs": ["official-learning-path"],
+    "url": "https://motion.dev/docs/react-layout-animations",
+    "localPurpose": "Use for shared-element transitions, layout changes, and FLIP-style motion.",
+    "resolvedUrl": "https://motion.dev/docs/react-layout-animations",
+    "title": "Layout Animation — React FLIP & Shared Element | Motion",
+    "description": "Animate layout changes in React with Motion. Auto layout transitions, FLIP, shared-element animations via layoutId, and performance tips (with code)."
+  },
+  {
+    "id": "use-scroll",
+    "group": "core-api",
+    "outputs": ["official-learning-path"],
+    "url": "https://motion.dev/docs/react-use-scroll",
+    "localPurpose": "Use for scroll-linked animations, progress indicators, and parallax.",
+    "resolvedUrl": "https://motion.dev/docs/react-use-scroll",
+    "title": "useScroll — React scroll-linked animations | Motion",
+    "description": "Create scroll-linked animations like progress bars & parallax with Motion for React"
+  },
+  {
+    "id": "gestures",
+    "group": "core-api",
+    "outputs": ["official-learning-path"],
+    "url": "https://motion.dev/docs/react-gestures",
+    "localPurpose": "Use for hover, press, focus, drag, and gesture-driven interactions.",
+    "resolvedUrl": "https://motion.dev/docs/react-gestures",
+    "title": "React gesture animations — hover, drag, press | Motion",
+    "description": "Power your UI with Motion for React"
+  },
+  {
+    "id": "accessibility",
+    "group": "core-api",
+    "outputs": ["official-learning-path"],
+    "url": "https://motion.dev/docs/react-accessibility",
+    "localPurpose": "Canonical page for reduced-motion handling and accessible animation behavior.",
+    "resolvedUrl": "https://motion.dev/docs/react-accessibility",
+    "title": "Create accessible animations in React — Guide | Motion",
+    "description": "Learn how to create accessible animations with Motion for React by respecting users"
+  },
+  {
+    "id": "tutorials",
+    "group": "learning",
+    "outputs": ["official-learning-path", "tutorials-and-examples"],
+    "url": "https://motion.dev/tutorials",
+    "localPurpose": "Best official tutorial hub when the user wants a worked learning path instead of only API docs.",
+    "resolvedUrl": "https://motion.dev/tutorials",
+    "title": "React animation tutorials | Motion",
+    "description": "Explore the official library of Motion (prev Framer Motion) tutorials for React, JavaScript, and Vue. Learn step-by-step from the creator of Motion and master web animation."
+  },
+  {
+    "id": "examples",
+    "group": "learning",
+    "outputs": ["official-learning-path", "tutorials-and-examples"],
+    "url": "https://examples.motion.dev/react",
+    "localPurpose": "Best official source for concrete examples and pattern comparison.",
+    "resolvedUrl": "https://motion.dev/examples?platform=react",
+    "title": "Official Motion Examples | React, JS & Vue Animations",
+    "description": "330+ examples for Motion (formerly Framer Motion). Full source code for React, JS, and Vue animations."
+  },
+  {
+    "id": "ai-kit",
+    "group": "optional",
+    "outputs": ["official-learning-path"],
+    "url": "https://motion.dev/docs/ai-kit",
+    "localPurpose": "Optional Motion AI kit and MCP workflow when the user already has access to that ecosystem.",
+    "resolvedUrl": "https://motion.dev/docs/ai-kit",
+    "title": "Motion AI Kit - AI animation tools for Claude, Cursor | Motion",
+    "description": "The Motion+ AI Kit adds skills and tools to improve your LLM"
+  }
+]

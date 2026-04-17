@@ -9,7 +9,9 @@ license: MIT
 
 ## Overview
 
-Motion (package: `motion`, formerly `framer-motion`) is the industry-standard React animation library used in production by thousands of applications. With 30,200+ GitHub stars and 300+ official examples, it provides a declarative API for creating sophisticated animations with minimal code.
+Motion (package: `motion`, formerly `framer-motion`) is the official Motion
+Division animation library for React and JavaScript. It provides declarative
+animations, gestures, scroll effects, layout transitions, and spring physics.
 
 **Key Capabilities:**
 - **Gestures**: drag, hover, tap, pan, focus with cross-device support
@@ -26,6 +28,18 @@ Motion (package: `motion`, formerly `framer-motion`) is the industry-standard Re
 `/Users/vabole/repos/skills` as a vendored fork. It preserves the upstream
 Motion guidance and adds a dedicated polish/bar-raising review layer in
 `references/polish-and-bar-raising.md`.
+
+**Official Source Note**: For current package versions, API details, examples,
+and tutorials, use the official Motion docs and tutorials listed in
+`references/official-learning-path.md`. This fork should complement the
+official material, not replace it.
+
+**Two-Lane Usage Model**:
+- Use `references/official-learning-path.md` and
+  `references/tutorials-and-examples.md` for plain official documentation,
+  latest API pages, tutorials, and examples.
+- Use `references/opinionated-guide.md` for the recommended subset and local
+  defaults about the good parts.
 
 ---
 
@@ -84,16 +98,11 @@ Motion guidance and adds a dedicated polish/bar-raising review layer in
 bun add motion  # preferred
 # or: npm install motion
 # or: yarn add motion
+# or: pnpm add motion
 ```
 
-**Current Version**: 12.23.24 (verified 2025-11-07)
-
-**Alternative for Cloudflare Workers**:
-```bash
-# Use framer-motion if deploying to Cloudflare Workers
-bun add framer-motion
-# or: npm install framer-motion
-```
+Do not hardcode a version from this skill. Check the official install docs when
+the user asks for the latest version or when package compatibility matters.
 
 ### Package Information
 
@@ -102,7 +111,7 @@ bun add framer-motion
   - `LazyMotion` + `m` component: ~4.6 KB
   - `useAnimate` mini: 2.3 KB (smallest React animation library)
   - `useAnimate` hybrid: 17 KB
-- **Dependencies**: React 18+ or React 19+
+- **Dependencies**: React 18.2+ or newer
 - **TypeScript**: Native support included (no @types package needed)
 
 ---
@@ -270,6 +279,14 @@ considered," load `references/polish-and-bar-raising.md`.
 Use that review pass after the functional animation works, not before. It is
 meant to improve motion quality, information hierarchy, pacing, and restraint.
 
+### 9. Opinionated Guide
+
+When the task is standard product UI work and the agent does not need the whole
+Motion surface, load `references/opinionated-guide.md`.
+
+That guide captures the preferred subset, default biases, and what to avoid by
+default.
+
 ---
 
 ## Integration Guides
@@ -284,7 +301,9 @@ import { motion } from "motion/react"
 
 **Tailwind**: ⚠️ Remove `transition-*` classes (causes conflicts with Motion animations)
 
-**Cloudflare Workers**: Use `framer-motion` v12.23.24 instead (Motion has Wrangler build issues)
+**Cloudflare Workers**: Verify current compatibility in the official docs and
+issue tracker before pinning a workaround. This skill no longer treats an older
+version-specific workaround as authoritative.
 
 **For complete integration guides** (Next.js patterns, SSR, framework-specific issues), load `references/nextjs-integration.md`.
 
@@ -390,10 +409,9 @@ import { motion } from "motion/react"
 
 **Symptom**: Wrangler build fails when using `motion` package.
 
-**Solution**: Use `framer-motion` v12.23.24 instead (GitHub issue #2918):
-```bash
-bun add framer-motion  # Same API, works with Workers
-```
+**Solution**: Check the current upstream compatibility status before pinning a
+package swap or version workaround. Do not assume an older workaround is still
+correct.
 
 ### Issue 5: Large List Performance
 
@@ -446,6 +464,23 @@ Claude should load these references based on user needs:
 - User asks "which animation library should I use?" or "is Motion overkill?"
 - User needs feature comparison or decision matrix
 
+### Load `references/official-learning-path.md` when:
+- User wants canonical Motion documentation rather than fork-local summaries
+- User asks for tutorials, official examples, or recommended learning order
+- User asks for the latest version, latest API guidance, or installation details
+- User wants the optional Motion MCP or AI kit workflow
+
+### Load `references/tutorials-and-examples.md` when:
+- User wants worked examples or tutorial-first learning material
+- User needs inspiration or implementation comparison
+- User wants to start from official examples before using local templates
+
+### Load `references/opinionated-guide.md` when:
+- User wants the recommended subset instead of the full API
+- The task is routine product UI motion rather than library exploration
+- You want defaults about what to use first and what to avoid by default
+- You want to separate plain docs from preferred practice
+
 ---
 
 ## Templates
@@ -464,12 +499,16 @@ Copy templates into your project and customize as needed.
 
 ## References
 
-This skill includes 4 comprehensive reference guides:
+This skill includes curated local reference guides:
 
 - **motion-vs-auto-animate.md** - Decision guide: when to use Motion vs AutoAnimate
 - **performance-optimization.md** - Bundle size, LazyMotion, virtualization, hardware acceleration
 - **nextjs-integration.md** - App Router vs Pages Router, "use client", known issues
 - **common-patterns.md** - Top 15 patterns with full code examples
+- **official-learning-path.md** - Official docs, examples, tutorials, and optional Motion AI kit/MCP entrypoints
+- **tutorials-and-examples.md** - Generated official learning surfaces for worked examples and tutorial paths
+- **opinionated-guide.md** - Preferred subset and default practices for product UI work
+- **polish-and-bar-raising.md** - Local refinement lens for quality, rhythm, hierarchy, and restraint
 
 See `references/` directory for detailed guides.
 
@@ -489,35 +528,16 @@ See `scripts/` directory for automation tools.
 ## Official Documentation
 
 - **Official Site**: https://motion.dev
-- **GitHub**: https://github.com/motiondivision/motion (30,200+ stars)
-- **Examples**: https://motion.dev/examples (300+ examples)
+- **React Docs**: https://motion.dev/docs/react
+- **Install Docs**: https://motion.dev/docs/react-installation
+- **Tutorials**: https://motion.dev/tutorials
+- **Examples**: https://examples.motion.dev/react
+- **GitHub**: https://github.com/motiondivision/motion
+- **Optional AI Kit / MCP**: https://motion.dev/docs/ai-kit
 
 **Related Skills**: `auto-animate` (simple lists), `tailwind-v4-shadcn` (styling), `nextjs` (App Router), `cloudflare-worker-base`
 
 **Motion vs AutoAnimate**: Load `references/motion-vs-auto-animate.md` for detailed comparison.
-
----
-
-## Token Efficiency Metrics
-
-**Token Savings**: ~83% (30k → 5k tokens) | **Error Prevention**: 100% (29+ errors) | **Time Savings**: ~85% (2-3 hrs → 20-30 min)
-
----
-
-## Package Versions (Verified 2025-11-07)
-
-| Package | Version | Status |
-|---------|---------|--------|
-| motion | 12.23.24 | ✅ Latest stable |
-| framer-motion | 12.23.24 | ✅ Alternative for Cloudflare |
-| react | 19.2.0 | ✅ Latest stable |
-| vite | 6.0.0 | ✅ Latest stable |
-
----
-
-## Contributing
-
-Found an issue or have a suggestion?
 - Open an issue: https://github.com/secondsky/claude-skills/issues
 - See templates and references for detailed examples
 

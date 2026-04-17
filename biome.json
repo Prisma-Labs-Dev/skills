@@ -17,6 +17,8 @@
       "catalog/**",
       "docs/**",
       "schemas/**",
+      "scripts/**",
+      "sources/**",
       "src/**",
       "tests/**",
       "README.md",

@@ -9,6 +9,8 @@
     "bootstrap": "pnpm install",
     "dev": "tsx watch src/cli.ts list --json",
     "skills-meta": "tsx src/cli.ts",
+    "motion-docs:refresh": "tsx scripts/motion-docs.ts refresh --apply",
+    "motion-docs:check": "tsx scripts/motion-docs.ts refresh",
     "test": "vitest run",
     "lint": "biome check . && tsc --noEmit",
     "format": "biome format --write .",
@@ -21,9 +23,9 @@
     "node": ">=25.0.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.2.4",
-    "@types/node": "^24.9.1",
-    "tsx": "^4.20.6",
+    "@biomejs/biome": "^2.4.12",
+    "@types/node": "^24.12.2",
+    "tsx": "^4.21.0",
     "typescript": "^5.9.3",
     "vitest": "^3.2.4"
   }

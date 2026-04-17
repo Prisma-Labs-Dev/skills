@@ -1,0 +1,89 @@
+{
+  "generatedFrom": "https://motion.dev",
+  "resources": [
+    {
+      "id": "quick-start",
+      "group": "foundation",
+      "outputs": ["official-learning-path"],
+      "url": "https://motion.dev/docs/quick-start",
+      "localPurpose": "Start here for a broad official orientation before diving into React-specific pages."
+    },
+    {
+      "id": "react-docs",
+      "group": "foundation",
+      "outputs": ["official-learning-path"],
+      "url": "https://motion.dev/docs/react",
+      "localPurpose": "Canonical React entrypoint for Motion concepts, install flow, and feature overview."
+    },
+    {
+      "id": "react-installation",
+      "group": "foundation",
+      "outputs": ["official-learning-path"],
+      "url": "https://motion.dev/docs/react-installation",
+      "localPurpose": "Use when package setup, framework integration, or latest install guidance matters."
+    },
+    {
+      "id": "motion-component",
+      "group": "core-api",
+      "outputs": ["official-learning-path"],
+      "url": "https://motion.dev/docs/react-motion-component",
+      "localPurpose": "Primary reference for the motion component and the props most teams use first."
+    },
+    {
+      "id": "animate-presence",
+      "group": "core-api",
+      "outputs": ["official-learning-path"],
+      "url": "https://motion.dev/docs/react-animate-presence",
+      "localPurpose": "Canonical reference for exit animations and conditional rendering."
+    },
+    {
+      "id": "layout-animations",
+      "group": "core-api",
+      "outputs": ["official-learning-path"],
+      "url": "https://motion.dev/docs/react-layout-animations",
+      "localPurpose": "Use for shared-element transitions, layout changes, and FLIP-style motion."
+    },
+    {
+      "id": "use-scroll",
+      "group": "core-api",
+      "outputs": ["official-learning-path"],
+      "url": "https://motion.dev/docs/react-use-scroll",
+      "localPurpose": "Use for scroll-linked animations, progress indicators, and parallax."
+    },
+    {
+      "id": "gestures",
+      "group": "core-api",
+      "outputs": ["official-learning-path"],
+      "url": "https://motion.dev/docs/react-gestures",
+      "localPurpose": "Use for hover, press, focus, drag, and gesture-driven interactions."
+    },
+    {
+      "id": "accessibility",
+      "group": "core-api",
+      "outputs": ["official-learning-path"],
+      "url": "https://motion.dev/docs/react-accessibility",
+      "localPurpose": "Canonical page for reduced-motion handling and accessible animation behavior."
+    },
+    {
+      "id": "tutorials",
+      "group": "learning",
+      "outputs": ["official-learning-path", "tutorials-and-examples"],
+      "url": "https://motion.dev/tutorials",
+      "localPurpose": "Best official tutorial hub when the user wants a worked learning path instead of only API docs."
+    },
+    {
+      "id": "examples",
+      "group": "learning",
+      "outputs": ["official-learning-path", "tutorials-and-examples"],
+      "url": "https://examples.motion.dev/react",
+      "localPurpose": "Best official source for concrete examples and pattern comparison."
+    },
+    {
+      "id": "ai-kit",
+      "group": "optional",
+      "outputs": ["official-learning-path"],
+      "url": "https://motion.dev/docs/ai-kit",
+      "localPurpose": "Optional Motion AI kit and MCP workflow when the user already has access to that ecosystem."
+    }
+  ]
+}

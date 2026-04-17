@@ -28,6 +28,16 @@ pnpm skills-meta install motion --agent codex
 pnpm skills-meta install apple-design --agent codex
 ```
 
+## Refresh generated Motion references
+
+```bash
+pnpm motion-docs:check
+pnpm motion-docs:refresh
+```
+
+Use this for the generated plain-docs layer that feeds the vendored `motion`
+skill's official references.
+
 ## Add a new external source
 
 1. Add the source under `sources` in `catalog/registry.json`.

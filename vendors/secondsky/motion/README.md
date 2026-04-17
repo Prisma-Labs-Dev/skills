@@ -1,7 +1,7 @@
 # Motion (Framer Motion)
 
 **Status**: Production Ready ✅
-**Last Updated**: 2025-11-07
+**Local Fork Reviewed**: 2026-04-17
 **Production Tested**: React 19 + Next.js 15 + Vite 6 + Tailwind v4
 
 ---
@@ -164,7 +164,12 @@ Claude Code automatically discovers this skill when you mention:
 
 ## What This Skill Does
 
-Production-ready setup for Motion (formerly Framer Motion) - the industry-standard React animation library with 30,200+ GitHub stars. Motion provides declarative animations, gesture controls, scroll effects, spring physics, layout animations, and SVG manipulation.
+Production-ready setup for Motion (formerly Framer Motion). This local fork
+uses a two-lane model:
+
+- generated references for official docs, tutorials, examples, and optional AI
+  kit pages,
+- opinionated local guides for the preferred subset and quality bar.
 
 ### Core Capabilities
 
@@ -177,7 +182,9 @@ Production-ready setup for Motion (formerly Framer Motion) - the industry-standa
 ✅ **Bundle Optimization** - 2.3 KB (mini) to 34 KB (full), optimizable to 4.6 KB with LazyMotion
 ✅ **29+ Documented Issues Prevented** - AnimatePresence, layout, performance, Next.js, Cloudflare
 ✅ **5 Production Templates** - Vite, Next.js, scroll, UI components, layout transitions
-✅ **4 Reference Guides** - vs AutoAnimate, performance, Next.js, common patterns
+✅ **Generated Official Learning Path** - docs, examples, tutorials, optional AI kit/MCP
+✅ **Opinionated Guide** - preferred subset and default practices for product UI work
+✅ **Local Polish Layer** - bar-raising review guidance after the animation works
 ✅ **2 Automation Scripts** - One-command setup, bundle optimizer
 
 ---
