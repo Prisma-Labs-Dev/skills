@@ -84,6 +84,7 @@ npx skills add github:Prisma-Labs/agent-skills --agent cursor --skill '*' -g -y
 
 | Skill | Type | Description |
 | --- | --- | --- |
+| `react-best-practices` | Vendored fork | React performance and architecture guidance with an explicit `useEffect`-as-last-resort bar |
 | `motion` | Library skill | Motion for React with official-doc routing, examples/tutorials links, an opinionated subset, and a polish/review layer |
 | `ui-animation-direction` | Guidance skill | Generic high-bar UI animation guidance across CSS, WAAPI, platform primitives, and libraries |
 

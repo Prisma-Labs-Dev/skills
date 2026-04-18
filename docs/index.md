@@ -8,6 +8,8 @@
   Maintainer note for keeping animation skill mechanics out of agent-facing files.
 - [maintainers/motion-skill.md](/Users/vabole/repos/skills/docs/maintainers/motion-skill.md)
   Maintainer note for the Motion skill's upstream origin and local reshaping.
+- [maintainers/react-best-practices-skill.md](/Users/vabole/repos/skills/docs/maintainers/react-best-practices-skill.md)
+  Maintainer note for the React best practices fork and its effect-discipline additions.
 - [implementation-plan.md](/Users/vabole/repos/skills/docs/implementation-plan.md)
   Current repo plan and planned slices.
 - [remaining-work.md](/Users/vabole/repos/skills/docs/remaining-work.md)

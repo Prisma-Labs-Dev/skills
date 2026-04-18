@@ -10,6 +10,14 @@
       "managedBy": "external"
     },
     {
+      "id": "frontend-skills-react-best-practices",
+      "kind": "local-fork",
+      "repository": "Prisma-Labs-Dev/frontend-skills",
+      "url": "https://github.com/Prisma-Labs-Dev/frontend-skills",
+      "description": "Local fork of the React best practices skill with stronger guidance against unnecessary useEffect usage.",
+      "managedBy": "vendored"
+    },
+    {
       "id": "secondsky-motion-fork",
       "kind": "local-fork",
       "repository": "secondsky/claude-skills",
@@ -72,6 +80,22 @@
       "notes": "Production-grade SwiftUI craftsmanship and visual quality guidance."
     },
     {
+      "id": "react-best-practices",
+      "sourceId": "frontend-skills-react-best-practices",
+      "install": {
+        "kind": "skills-add",
+        "path": "skills/react-best-practices",
+        "skill": "react-best-practices"
+      },
+      "upstream": {
+        "repository": "Prisma-Labs-Dev/frontend-skills",
+        "commit": "fcb87e33b5c91af2471b56a789f5383b5158078f",
+        "path": "skills/react-best-practices"
+      },
+      "tags": ["frontend", "react", "performance", "effects"],
+      "notes": "Local fork of the React best practices skill. This fork keeps the upstream performance guidance but makes unnecessary useEffect usage a first-class anti-pattern."
+    },
+    {
       "id": "motion",
       "sourceId": "secondsky-motion-fork",
       "install": {
@@ -113,7 +137,7 @@
     {
       "id": "all",
       "description": "All skills currently curated in this repository.",
-      "skills": ["motion", "ui-animation-direction"]
+      "skills": ["react-best-practices", "motion", "ui-animation-direction"]
     }
   ]
 }

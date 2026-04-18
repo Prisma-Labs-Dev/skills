@@ -10,10 +10,28 @@ describe("catalog", () => {
     const catalog = loadCatalog(root);
 
     expect(catalog.sources.length).toBeGreaterThan(0);
+    expect(
+      catalog.skills.find((entry) => entry.id === "react-best-practices"),
+    ).toBeDefined();
     expect(catalog.skills.find((entry) => entry.id === "motion")).toBeDefined();
     expect(
       catalog.skills.find((entry) => entry.id === "ui-animation-direction"),
     ).toBeDefined();
+  });
+
+  test("plans local install commands for the react best practices fork", () => {
+    const catalog = loadCatalog(root);
+    const plan = planInstall(catalog, root, "react-best-practices", {
+      agents: ["codex"],
+      global: false,
+      copy: false,
+    });
+
+    expect(plan.commands).toHaveLength(1);
+    expect(plan.commands[0]?.source).toBe(
+      path.join(root, "skills/react-best-practices"),
+    );
+    expect(plan.commands[0]?.args).toContain("codex");
   });
 
   test("plans local install commands for the motion fork", () => {
@@ -54,6 +72,21 @@ describe("catalog", () => {
     });
 
     expect(plan.expandedSkills.map((skill) => skill.id)).toEqual([
+      "motion",
+      "ui-animation-direction",
+    ]);
+  });
+
+  test("all includes every curated local skill", () => {
+    const catalog = loadCatalog(root);
+    const plan = planInstall(catalog, root, "all", {
+      agents: [],
+      global: false,
+      copy: false,
+    });
+
+    expect(plan.expandedSkills.map((skill) => skill.id)).toEqual([
+      "react-best-practices",
       "motion",
       "ui-animation-direction",
     ]);
