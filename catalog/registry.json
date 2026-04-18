@@ -28,7 +28,7 @@
     {
       "id": "ui-animation-direction",
       "kind": "repo-owned-package",
-      "repository": "Prisma-Labs/agent-skills",
+      "repository": "Prisma-Labs-Dev/skills",
       "url": "file:///Users/vabole/repos/skills/skills/ui-animation-direction",
       "description": "Repo-owned high-bar animation guidance skill for UI motion across CSS, native platform primitives, and animation libraries.",
       "managedBy": "repo-owned"

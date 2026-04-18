@@ -11,8 +11,8 @@ maintain it without reconstructing hidden context.
 The repository root is an install source.
 
 For local use on this machine, the source path is
-`/Users/vabole/repos/skills`. Once this repository has a published remote,
-replace that local path with `github:Prisma-Labs/agent-skills`.
+`/Users/vabole/repos/skills`. Once this repository is pushed to GitHub,
+replace that local path with `github:Prisma-Labs-Dev/skills`.
 
 ### Claude Code
 
@@ -25,7 +25,7 @@ npx skills add /Users/vabole/repos/skills --agent claude-code --skill '*' -y
 Install all skills from GitHub:
 
 ```bash
-npx skills add github:Prisma-Labs/agent-skills --agent claude-code --skill '*' -y
+npx skills add github:Prisma-Labs-Dev/skills --agent claude-code --skill '*' -y
 ```
 
 Install only Motion:
@@ -51,7 +51,7 @@ npx skills add /Users/vabole/repos/skills --agent codex --skill '*' -g -y
 Install all skills globally from GitHub:
 
 ```bash
-npx skills add github:Prisma-Labs/agent-skills --agent codex --skill '*' -g -y
+npx skills add github:Prisma-Labs-Dev/skills --agent codex --skill '*' -g -y
 ```
 
 Install only Motion:
@@ -77,7 +77,7 @@ npx skills add /Users/vabole/repos/skills --agent cursor --skill '*' -g -y
 Install all skills globally from GitHub:
 
 ```bash
-npx skills add github:Prisma-Labs/agent-skills --agent cursor --skill '*' -g -y
+npx skills add github:Prisma-Labs-Dev/skills --agent cursor --skill '*' -g -y
 ```
 
 ## What's Included
